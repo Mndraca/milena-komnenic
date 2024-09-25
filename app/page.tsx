@@ -12,6 +12,8 @@ import Footer from "./footer/page";
 import Contact from "./contact/page";
 import BlogNav from "./components/navbarblog";
 
+export const revalidate = 30;
+
 const getData = async () => {
   const query = `
   *[_type == 'blog'] | order(_createAt desc) {
