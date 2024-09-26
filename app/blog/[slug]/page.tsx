@@ -13,6 +13,9 @@ async function getData(slug: string) {
         "currentSlug": slug.current,
         title,
         content,
+        category[] -> {
+          title,
+        },
         titleImage
     }[0]`;
 
@@ -42,16 +45,33 @@ export default async function BlogArticle({
         </span>
       </h1>
 
-      <div className="flex justify-center mt-10">
+      <div className="flex justify-center mt-12 ">
         <Image
           src={urlFor(data.titleImage).url()}
-          width={800}
-          height={800}
+          width={600}
+          height={600}
           alt="Title Image"
           className="rounded-lg shadow-lg object-cover w-full max-w-4xl"
         />
       </div>
-      <div className="mt-16 prose prose-blue  dark:prose-invert ml-16 text-lg text-justify">
+
+      <div className="mt-4 text-center">
+        <h2 className="text-lg font-semibold text-gray-700 dark:text-gray-300">
+          Category:
+        </h2>
+        <ul className="flex justify-center space-x-4 mt-2">
+          {data.category.map((cat: { title: string }) => (
+            <li
+              key={cat.title}
+              className="bg-green-200 rounded-full px-4 py-1 text-sm text-green-700"
+            >
+              {cat.title}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="mt-16 prose prose-blue dark:prose-invert ml-2 text-lg text-justify">
         <PortableText value={data.content} />
       </div>
     </div>

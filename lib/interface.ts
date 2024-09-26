@@ -6,6 +6,7 @@ title: string,
 smallDescription: string,
 currentSlug: string,
 titleImage: any;
+category: any;
 }
 
 export interface BlogPropsSecond {
@@ -13,4 +14,5 @@ export interface BlogPropsSecond {
     title: string,
     content: any;
     titleImage: any;
+    category: any;
 }

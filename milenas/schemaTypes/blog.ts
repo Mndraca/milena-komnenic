@@ -28,6 +28,13 @@ export default {
             
         },
         {
+            name: 'category',
+            type: 'array',
+            title: "Category",
+            of: [{type: 'reference', to: {type: 'category'}}]
+            
+        },
+        {
             name: "content",
             type: "array",
             title: "Content",
