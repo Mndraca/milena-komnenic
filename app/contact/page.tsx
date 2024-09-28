@@ -1,11 +1,11 @@
 "use client";
 
 import React, { ChangeEvent, FC, useState } from "react";
-import Input from "../input/page";
-import Button from "../button/page";
+import Input from "../components/input";
+import Button from "../components/buttonpp";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import BookingCalendar from "../calendar/page";
-import Resume from "../resume/page";
+import BookingCalendar from "../components/calendar";
+import Resume from "../components/resume";
 
 const Contact: FC = () => {
   const [formDataName, setFormDataName] = useState<string>("");

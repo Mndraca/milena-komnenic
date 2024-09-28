@@ -69,12 +69,14 @@
 .project-list {
   display: flex;
   flex-wrap: wrap;
+  
+
 
 }
 
 .project {
   flex: 1;
-  margin: 0;
+  margin: 5px;
   padding: 20px;
   border: 2px solid pink;
   border-radius: 10px;

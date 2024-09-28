@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Navlink from "../navlink/page";
+import Navlink from "./navlink";
 
 interface Link {
   path: string;
@@ -34,3 +34,5 @@ const MenuOverlay: FC<MenuOverlayProps> = ({ links }) => {
 };
 
 export default MenuOverlay;
+
+//move to components

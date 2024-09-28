@@ -1,9 +1,10 @@
 "use client";
 
 import { FC, useState } from "react";
-import Navlink from "../navlink/page";
-import MenuOverlay from "../menuOverlay/page";
+import Navlink from "./navlink";
+import MenuOverlay from "./menuOverlay";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
+import { ModeToggle } from "./modeToggle";
 
 interface navLinkProps {
   title: string;
@@ -60,6 +61,9 @@ const Navbar: FC = () => {
                 <Navlink href={link.path} title={link.title} />
               </li>
             ))}
+            <li>
+              <ModeToggle />
+            </li>
           </ul>
         </div>
       </div>

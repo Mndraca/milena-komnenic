@@ -1,7 +1,7 @@
 import { BlogPropsSecond } from "@/lib/interface";
-import { client } from "@/lib/sanity";
+import { client } from "@/app/env";
 import Image from "next/image";
-import { urlFor } from "@/lib/sanity";
+import { urlFor } from "@/app/env";
 import { PortableText } from "next-sanity";
 import BlogNav from "@/app/components/navbarblog";
 
@@ -71,7 +71,7 @@ export default async function BlogArticle({
         </ul>
       </div>
 
-      <div className="mt-16 prose prose-blue dark:prose-invert ml-2 text-lg text-justify">
+      <div className="mt-16 prose prose-blue dark:prose-invert ml-24 text-xl text-justify">
         <PortableText value={data.content} />
       </div>
     </div>
