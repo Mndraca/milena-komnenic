@@ -8,11 +8,17 @@ export interface BlogProps {
     titleImage: string;
     category: [];
     }
+
+export interface Block {
+    _key: string;
+    _type: string;
+    children: { text: string }[]; 
+    }
     
 export interface BlogPropsSecond {
     currentSlug: string,
     title: string,
-    content: any;
+    content: Block[];  
     titleImage: string;
     category: [];
-}
+    }

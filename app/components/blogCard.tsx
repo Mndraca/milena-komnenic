@@ -1,4 +1,3 @@
-// components/BlogCard.tsx
 import { FC } from "react";
 import { Card, CardContent } from "@/app/components/ui/card";
 import { Button } from "@/app/components/ui/button";
@@ -51,7 +50,9 @@ const BlogCard: FC<BlogCardProps> = ({
           {smallDescription}
         </p>
         <Button asChild className="w-full mt-7">
-          <Link href={`/blog/${currentSlug}`}>Read more</Link>
+          <Link href={`/blog/${currentSlug}`} target="_blank">
+            Read more
+          </Link>
         </Button>
       </CardContent>
     </Card>
