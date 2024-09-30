@@ -9,15 +9,15 @@ export const revalidate = 30;
 
 async function getData(slug: string) {
   const query = `
-    *[_type == "blog" && slug.current == '${slug}']{
-        "currentSlug": slug.current,
-        title,
-        content,
-        category[] -> {
-          title,
-        },
-        titleImage
-    }[0]`;
+  *[_type == "blog" && slug.current == '${slug}']{
+    "currentSlug": slug.current,
+    title,
+    content,
+    category[] -> {
+      title,
+    },
+    titleImage
+  }[0]`;
 
   const data = await client.fetch(query);
   return data;
