@@ -1,4 +1,4 @@
-import { BlogProps } from "@/lib/interface";
+import { BlogProps } from "@/app/interface";
 import Navbar from "./components/navbar";
 import Navlink from "./components/navlink";
 import About from "./about/page";

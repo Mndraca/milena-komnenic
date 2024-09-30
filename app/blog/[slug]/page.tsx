@@ -1,4 +1,4 @@
-import { BlogPropsSecond } from "@/lib/interface";
+import { BlogPropsSecond } from "@/app/interface";
 import { client } from "@/app/env";
 import Image from "next/image";
 import { urlFor } from "@/app/env";
