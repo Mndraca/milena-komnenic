@@ -123,9 +123,7 @@ const Contact: FC = () => {
               </i>
             </a>
           </div>
-          <div>
-            <Resume />
-          </div>
+          <Resume />
         </div>
         {isSubmitted ? (
           <div className="text-center">
